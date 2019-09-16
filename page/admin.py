@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import link
+from .models import Page
 
 # Register your models here.
-class LinkAdmin(admin.ModelAdmin):
+class PageAdmin(admin.ModelAdmin):
     readonly_fields = ('created','updated')
 
-admin.site.register(link, LinkAdmin)
+admin.site.register(Page, PageAdmin)
