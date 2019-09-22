@@ -18,7 +18,7 @@
                 <img class="mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{posting.image.url}}" alt="">
               </p>
               <p class="mb-0 mbt">
-                  {{posting.content|linebreaks}}
+                  {{posting.content|safe}}
               </p>
                 <p class="mb-0 mbt">
                 <span class="section-heading-under">Publicado por <em><b>{{posting.author}}</b>

@@ -93,11 +93,20 @@
 	        </a>
           {%endif%}
 	    </p>
+      <!---
         <p class="m-0 mbt">
         	<a href="sample.html" class="link">Política de privacidad</a> ·
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
 		</p>
+      --->
+      {%load pages_extra%}
+      {%get_page_list as page_list%}
+      
+      {%for list in page_list%}
+      <a href="{% url 'page' list.id  list.title|slugify%}" class="link">{{list.title}}</a> {%if not forloop.last%}·{%endif%}
+          
+      {%endfor%}
         <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
       </div>
 	</footer>
